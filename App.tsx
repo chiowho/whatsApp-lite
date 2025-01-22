@@ -8,6 +8,7 @@ import * as Font from "expo-font";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import AppNavigator from "./src/navigation";
 import { store } from "./src/utils/store";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 // Keep the splash screen visible while we fetch resources(fonts)
 SplashScreen.preventAutoHideAsync();
@@ -57,12 +58,14 @@ export default function App() {
 	}
 
 	return (
-		<Provider store={store}>
-			<SafeAreaProvider style={{ flex: 1 }} onLayout={onLayoutRootView}>
-				<MenuProvider>
-					<AppNavigator />
-				</MenuProvider>
-			</SafeAreaProvider>
-		</Provider>
+		<GestureHandlerRootView style={{ flex: 1 }}>
+			<Provider store={store}>
+				<SafeAreaProvider style={{ flex: 1 }} onLayout={onLayoutRootView}>
+					<MenuProvider>
+						<AppNavigator />
+					</MenuProvider>
+				</SafeAreaProvider>
+			</Provider>
+		</GestureHandlerRootView>
 	);
 }

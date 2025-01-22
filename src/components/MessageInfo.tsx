@@ -24,7 +24,7 @@ const MessageInfo = (props: Props) => {
 					<Text style={styles.time}>
 						{`${edited ? "Edited " : ""}`} {dateString}
 					</Text>
-					<Ionicons name="md-checkmark-done-sharp" size={13} color={isSeen ? colors.blue : colors.gray} />
+					<Ionicons name="checkmark-done" size={13} color={isSeen ? colors.blue : colors.gray} />
 				</View>
 			</View>
 		</View>

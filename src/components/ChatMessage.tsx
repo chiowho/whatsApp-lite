@@ -198,7 +198,7 @@ const ChatMessage = (props: Props) => {
 								{`${edited ? "Edited " : ""}`} {dateString}
 							</Text>
 							{!deleted && type === "myMessage" && (
-								<Ionicons name="md-checkmark-done-sharp" size={13} color={isSeen ? colors.blue : colors.gray} />
+								<Ionicons name="checkmark-done" size={13} color={isSeen ? colors.blue : colors.gray} />
 							)}
 						</View>
 					)}
@@ -215,7 +215,7 @@ const ChatMessage = (props: Props) => {
 							<>
 								<MenuItem
 									text="Info"
-									icon="md-information-circle"
+									icon="information-circle"
 									onSelect={() => {
 										navigation.navigate("MessageInfo", {
 											totalSeens: totalSeens || [],

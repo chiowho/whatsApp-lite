@@ -43,7 +43,7 @@ const MessageInfoScreen = (props: Props) => {
 
 			<View style={{ paddingHorizontal: 20 }}>
 				<View style={{ flexDirection: "row", alignItems: "center", gap: 5, marginTop: 30, marginBottom: 10 }}>
-					<Ionicons name="md-checkmark-done-sharp" size={24} color={colors.blue} />
+					<Ionicons name="checkmark-done" size={24} color={colors.blue} />
 					<Text style={styles.title}>SEEN BY</Text>
 				</View>
 				<FlatList

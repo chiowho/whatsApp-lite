@@ -307,7 +307,7 @@ const ChatScreen = (props: Props) => {
 		<SafeAreaView style={styles.container} edges={["bottom", "left", "right"]}>
 			<KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={styles.screen} keyboardVerticalOffset={100}>
 				<ImageBackground source={require("../../assets/images/BG.png")} style={styles.backgroundImage}>
-					<PageContainer styles={{ backgroundColor: "transparent" }}>
+					<PageContainer styles={{ backgroundColor: "transparent", marginTop: 16 }}>
 						{chatId ? (
 							<>
 								{/* <Bubble text="This is a new chat. Say hi!" type="system" /> */}
@@ -490,7 +490,7 @@ const styles = StyleSheet.create({
 	input: {
 		flex: 1,
 		alignItems: "center",
-		height: 50,
+		height: 30,
 		paddingHorizontal: 12,
 		backgroundColor: "#fff",
 		borderWidth: 1,

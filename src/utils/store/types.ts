@@ -52,15 +52,3 @@ export type Message = {
 export type Messages = {
 	[messageId: string]: Omit<Message, "messageId">;
 };
-
-export type Status = {
-	statusId: string;
-	imageUrl: string;
-	createdAt: string;
-	views: {
-		[key: string]: {
-			viewerId: string;
-			viewedAt: string;
-		};
-	};
-};

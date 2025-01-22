@@ -10,8 +10,6 @@ import ChatScreen from "../screens/Chat.Screen";
 import NewChatScreen from "../screens/NewChat.Screen";
 import ContactScreen from "../screens/Contact.screen";
 import ParticipantsScreen from "../screens/Participants.screen";
-import StatusScreen from "../screens/Status.screen";
-import UserStatusesScreen from "../screens/UserStatuses.screen";
 import ViewsScreen from "../screens/Views.screen";
 import MessageInfoScreen from "../screens/MessageInfo.Screen";
 
@@ -37,16 +35,6 @@ const TabNavigator = (props: TabNavigatorProps) => {
 					tabBarLabel: "Chats",
 					tabBarIcon: ({ color, size }) => {
 						return <Ionicons name="chatbubbles" size={size} color={color} />;
-					},
-				}}
-			/>
-			<Tab.Screen
-				name="Status"
-				component={StatusScreen}
-				options={{
-					tabBarLabel: "Status",
-					tabBarIcon: ({ color, size }) => {
-						return <FontAwesome5 name="instalod" size={size} color={color} />;
 					},
 				}}
 			/>
@@ -111,9 +99,6 @@ export const StackNavigator = () => {
 
 			<Stack.Group screenOptions={{ presentation: "modal" }}>
 				<Stack.Screen name="NewChat" component={NewChatScreen} />
-
-				<Stack.Screen name="UserStatuses" component={UserStatusesScreen} />
-
 				<Stack.Screen
 					name="MessageInfo"
 					component={MessageInfoScreen}
